@@ -1,3 +1,11 @@
+CL-4.0.2: Added Hero Component.
+- Added 2 new assets(profile) & dummy pdf file.
+- Installed react-icons to add icons easily.
+- Updated layout.tsx file.
+- Added Hero component.
+- Added animations for the Hero component.
+
+
 CL-4.0.1: Added header component.
 - Installed framer motion
 - Added HeaderComponent.
