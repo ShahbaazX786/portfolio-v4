@@ -1,3 +1,8 @@
+CL-4.0.3: Added Dummy About me Component.
+- Restructured components.
+- Added about me component.
+
+
 CL-4.0.2: Added Hero Component.
 - Added 2 new assets(profile) & dummy pdf file.
 - Installed react-icons to add icons easily.
