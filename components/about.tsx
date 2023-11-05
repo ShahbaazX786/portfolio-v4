@@ -6,7 +6,7 @@ import SectionHeading from './shared/sectionHeading';
 
 const AboutComponent = () => {
     return (
-        <section className='text-center mb-28 xxs:mb-16'>
+        <section className='text-center mb-20 xxs:mb-16 md:max-w-[40rem] lg:max-w-[60rem] max-w-[60rem]'>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}

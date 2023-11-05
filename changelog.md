@@ -1,3 +1,8 @@
+CL-4.0.4: Added side Components.
+- Added socials component for left side.
+- And added emailto for right side.
+
+
 CL-4.0.3: Added Dummy About me Component.
 - Restructured components.
 - Added about me component.

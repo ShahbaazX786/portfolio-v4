@@ -10,7 +10,7 @@ import { BsFillArrowRightCircleFill, BsDownload } from "react-icons/bs";
 
 const HeroComponent = () => {
     return (
-        <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
+        <section className='mb-28 md:max-w-[40rem] lg:max-w-[60rem] max-w-[60rem] text-center sm:mb-0'>
             <div className='flex justify-center items-center'>
                 <div className='relative'>
                     <motion.div
