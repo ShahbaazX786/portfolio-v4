@@ -1,3 +1,10 @@
+CL-4.0.5: Added Projects.
+- Added Project component.
+- Added Project assets and types.
+- Added ProjectCard component.
+- Updated sectionHeading styles.
+
+
 CL-4.0.4: Added side Components.
 - Added socials component for left side.
 - And added emailto for right side.
