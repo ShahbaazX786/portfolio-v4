@@ -18,7 +18,7 @@ const LeftSocialComponent = () => {
                 <span className='hover:scale-[1.8] scale-125 hover:text-pink-600 transition-all ease-linear duration-100'> <LuInstagram /></span>
                 <span className='hover:scale-[1.8] scale-125 hover:text-orange-600 transition-all ease-linear duration-100'> <LuMail /></span>
             </div>
-            <span className='bg-gray-950 h-40 w-[2px] mt-8 rounded-full hidden sm:block'></span>
+            <span className='bg-gray-500 h-40 w-[2px] mt-8 rounded-full hidden sm:block'></span>
         </motion.div>
     )
 }
