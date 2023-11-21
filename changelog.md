@@ -1,3 +1,11 @@
+CL-4.0.7: Optimization: Installed sharp package for Image optimizations.
+- When **npm run build** is executed it strongly recommended to install **sharp** package to further optimize the images in the app.
+- Tip: If you want to see how the final prod build will look like just follow the below steps:
+    - Execute **npm run build** first.
+    - Then execute **npm run start**.
+    - Then open the browser and check if the website is working as expected.
+- Added custom styling to scrollbar and scrollthumb.
+
 CL-4.0.6: Added Header Animation, Refactoring & Code Optimizations.
 - Decreased color contrast of left/right social components.
 - Added ids to components so that we can scroll down to particular section upon clicking header.
