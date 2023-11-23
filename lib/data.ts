@@ -3,6 +3,11 @@ import project2Img from "@/public/images/projects/AngularPortfolio3.png";
 import project3Img from "@/public/images/projects/FlexDB.png";
 import project4Img from "@/public/images/projects/TextUtils.png";
 
+import React from "react";
+import { LuGraduationCap } from "react-icons/lu";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+
 export const HeaderLinks = [
   {
     name: "Home",
@@ -93,4 +98,32 @@ export const skillsData = [
   "Framer Motion",
   "Docker",
   "Kubernetes",
+] as const;
+
+
+export const experiencesData = [
+  {
+    title: "Front-End Developer",
+    location: "Remote",
+    description: "I worked as a front-end developer for a freelance Project.",
+    icon: React.createElement(FaReact),
+    date: "2023 - 2023",
+  },
+  {
+    title: "Application Development Associate",
+    location: "Hyderabad, India",
+    description:
+      "I'm now a MEAN stack developer working in Accenture. My stack includes Angular, Node.js, TypeScript, MongoDB.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021 - present",
+  },
+  {
+    title: "Graduation",
+    location: "Kurnool",
+    description:
+      "I graduated after 4 years of studying Computer Science & Engineering.",
+    // using react.crateelement here cuz this file is .ts not .tsx.
+    icon: React.createElement(LuGraduationCap),
+    date: "2017 - 2021",
+  },
 ] as const;

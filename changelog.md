@@ -1,3 +1,7 @@
+CL-4.0.9: Added Experience Section.
+- Added Experience section. 
+- But this ain't working right. Maybe I will change this later.
+
 CL-4.0.8: Added Skills Section.
 - Added Skills section.
 - Updated data.ts file.
