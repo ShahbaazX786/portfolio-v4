@@ -15,7 +15,7 @@ const ExperienceComponent = () => {
     const { ref } = useSectionInView("Experience", 0.1);
 
     return (
-        <section ref={ref} id='experience'>
+        <section ref={ref} id='experience' className='lg:max-w-[50rem] xxs:max-w-xs xs:max-w-sm sm:max-w-md sm:mb-0 md:mb-28 scroll-mt-28 mt-4'>
             <SectionHeading heading={'Experience'} />
             <VerticalTimeline lineColor="">
                 {experiencesData.map((item, index) => (

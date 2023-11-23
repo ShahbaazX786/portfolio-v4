@@ -21,9 +21,10 @@ export default function Home() {
       <SectionDividerComponent />
       <AboutComponent />
       <SectionDividerComponent />
+      <SkillsComponent />
+      <SectionDividerComponent />
       <ProjectsComponent />
       <SectionDividerComponent />
-      <SkillsComponent />
       <ExperienceComponent />
     </main>
   )

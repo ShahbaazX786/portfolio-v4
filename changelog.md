@@ -1,3 +1,10 @@
+CL-4.1.0: Improvements/Bug-Fixes:
+- Improved exp section.
+- Rearranged sections.
+- Updated exp external-styles.
+- Updated exp responsiveness.
+
+
 CL-4.0.9: Added Experience Section.
 - Added Experience section. 
 - But this ain't working right. Maybe I will change this later.
