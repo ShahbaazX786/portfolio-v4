@@ -4,6 +4,7 @@ import ProjectsComponent from "@/components/projects";
 import SectionDividerComponent from "@/components/shared/sectionDivider";
 import LeftSocialComponent from "@/components/shared/leftSocial";
 import RightSocialComponent from "@/components/shared/rightSocial";
+import SkillsComponent from "@/components/skills";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <SectionDividerComponent />
       <ProjectsComponent />
       <SectionDividerComponent />
+      <SkillsComponent />
     </main>
   )
 }

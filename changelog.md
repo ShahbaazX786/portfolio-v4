@@ -1,3 +1,9 @@
+CL-4.0.8: Added Skills Section.
+- Added Skills section.
+- Updated data.ts file.
+- Updated mainpage.tsx file.
+- Used useSectionInView to utilize the step by step skill drop animation.
+
 CL-4.0.7: Optimization: Installed sharp package for Image optimizations.
 - When **npm run build** is executed it strongly recommended to install **sharp** package to further optimize the images in the app.
 - Tip: If you want to see how the final prod build will look like just follow the below steps:

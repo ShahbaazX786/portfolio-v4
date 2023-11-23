@@ -66,3 +66,31 @@ export const projectsData = [
     imageUrl: project4Img,
   },
 ];
+
+
+export const skillsData = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "Angular",
+  "React",
+  "Next.js",
+  "Git",
+  "Node.js",
+  "Express",
+  "Tailwind",
+  "Bootstrap",
+  "Material UI",
+  "Angular Material",
+  "Jest",
+  "Accessibility",
+  "Figma",
+  "Photoshop",
+  "Prisma",
+  "MongoDB",
+  "Redux Toolkit",
+  "Framer Motion",
+  "Docker",
+  "Kubernetes",
+] as const;
