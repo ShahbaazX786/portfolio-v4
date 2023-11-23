@@ -17,7 +17,7 @@ const ProjectCardComponent = ({ title, description, tags, imageUrl }: ProjectCar
     const transformedOpacity = useTransform(scrollYProgress, [0,1], [0.6 , 1]);
 
     return (
-        <motion.div style={{ scale: transformedScale, opacity: transformedOpacity }} ref={ref} className='group mb-4 sm:mb-8 last:mb-2'>
+        <motion.div style={{ scale: transformedScale, opacity: transformedOpacity }} ref={ref} className='group mb-4 sm:mb-8 last:mb-2 shadow-md'>
             <section className='lg:max-w-[50rem] border border-black/5 overflow-hidden sm:pr-8 bg-gray-100 relative sm:h-80 shadow-sm hover:bg-gray-200 transition rounded-md group-even:pl-12'>
                 <div className='pt-4 pb-7 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full justify-start group-even:ml-[22.5rem]'>
                     <h3 className='text-2xl font-semibold'>{title}</h3>

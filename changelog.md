@@ -1,3 +1,8 @@
+CL-4.1.2: Added Contact Section:
+- Added just design for now.
+- Added box-shadow for few sections.
+
+
 CL-4.1.0: Improvements/Bug-Fixes:
 - Improved exp section.
 - Rearranged sections.

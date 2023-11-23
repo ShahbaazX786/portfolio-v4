@@ -6,6 +6,7 @@ import LeftSocialComponent from "@/components/shared/leftSocial";
 import RightSocialComponent from "@/components/shared/rightSocial";
 import SkillsComponent from "@/components/skills";
 import ExperienceComponent from "@/components/experience";
+import ContactComponent from "@/components/contact";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <ProjectsComponent />
       <SectionDividerComponent />
       <ExperienceComponent />
+      <ContactComponent />
     </main>
   )
 }
