@@ -1,3 +1,6 @@
+CL-4.1.4: Brand Name:
+- Added Brand Name with animations.
+
 CL-4.1.3: Updating Readme:
 - Updating Readme.
 
