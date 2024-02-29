@@ -1,3 +1,7 @@
+CL-4.2.1: Added Footer Component
+- Created a reusable component with shadcn ui's tooltip component.
+- created types for footer props.
+
 CL-4.2.0.2: Added a new shadcn ui Project Card Component.
 
 CL-4.2.0.1: Installing and configuring Shadcn ui - 2
