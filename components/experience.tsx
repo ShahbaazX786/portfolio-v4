@@ -1,7 +1,7 @@
 "use client";
 
 import { useSectionInView } from '@/hooks/useSectionInView';
-import React from 'react'
+import React from 'react';
 import SectionHeading from './shared/sectionHeading';
 
 import { experiencesData } from '@/lib/data';

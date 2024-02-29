@@ -1,3 +1,13 @@
+CL-4.2.0: Installing and configuring Shadcn ui - 1
+
+CL-4.1.5: Minor Bug Fix:
+
+CL-4.1.4: Brand Name:
+- Added Brand Name with animations.
+
+CL-4.1.3: Updating Readme:
+- Updating Readme.
+
 CL-4.1.2: Added Contact Section:
 - Added just design for now.
 - Added box-shadow for few sections.

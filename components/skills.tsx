@@ -31,7 +31,9 @@ const SkillsComponent = () => {
         {
           skillsData.map((skill, index) => (
             // once:true will lead to rendering the animation only once
-            <motion.li variants={fadeInAnimation} initial="initial" whileInView="animate" custom={index} viewport={{once:true}} key={index} className='bg-white border border-black/[0.1] rounded-xl px-5 py-3 cursor-pointer !hover:scale-105 shadow-md'>{skill}</motion.li>
+            <span className='hover:scale-110 ease-linear transition-all' key={index}>
+              <motion.li variants={fadeInAnimation} initial="initial" whileInView="animate" custom={index} viewport={{ once: true }} className='bg-white border border-black/[0.1] rounded-xl px-5 py-3 cursor-pointer shadow-md'>{skill}</motion.li>
+            </span>
           ))
         }
       </ul>
