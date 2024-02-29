@@ -1,3 +1,5 @@
+CL-4.2.0.2: Added a new shadcn ui Project Card Component.
+
 CL-4.2.0.1: Installing and configuring Shadcn ui - 2
 
 CL-4.2.0: Installing and configuring Shadcn ui - 1

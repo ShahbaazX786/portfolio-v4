@@ -7,6 +7,7 @@ import RightSocialComponent from "@/components/shared/rightSocial";
 import SkillsComponent from "@/components/skills";
 import ExperienceComponent from "@/components/experience";
 import ContactComponent from "@/components/contact";
+import ProjectCard from "@/components/shared/ProjectCard";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="fixed bottom-0 right-5">
         <RightSocialComponent />
       </div>
+      <ProjectCard />
       {/* <h1 className="text-5xl font-bold transition-all ease-linear hover:scale-110 text-center mx-auto my-auto pt-12">Bismillah</h1> */}
       <HeroComponent />
       <SectionDividerComponent />
