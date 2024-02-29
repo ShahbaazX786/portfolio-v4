@@ -1,29 +1,25 @@
-import React from 'react';
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
-    CardTitle,
+    CardTitle
 } from "@/components/ui/card";
 
 import { CiFolderOn } from "react-icons/ci";
+import { FaReact } from "react-icons/fa";
 import { RiShareBoxLine } from "react-icons/ri";
 import { VscGithubAlt } from "react-icons/vsc";
-import { FaReact } from "react-icons/fa";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
+import TooltipRE from '../shadcn-simplified/reusable-tooltip';
 
 
-type ProjectCardProps = {
+export type ProjectCardProps = {
     title: string,
     desc: string,
     skills: Array<string>
 }
-
-
 
 const ProjectCard = () => {
     return (
@@ -31,27 +27,16 @@ const ProjectCard = () => {
             <CardHeader>
                 <div className='flex flex-row justify-between items-center mb-4'>
                     <Button variant="noShow" size="icon"><CiFolderOn size={32} /></Button>
-                    <div className='flex flex-row justify-between gap-2'>
-                        <VscGithubAlt size={20} />
-                        <RiShareBoxLine size={20} />
+                    <div className='flex flex-row justify-between'>
+                        <Button variant="noShow" size="icon"><VscGithubAlt size={20} /></Button>
+                        <Button variant="noShow" size="icon"> <RiShareBoxLine size={20} /></Button>
                     </div>
                 </div>
                 <CardTitle className='text-xl capitalize'>Project Title Lorem ipsum dolor sit amet, consectetur adipisicing elit.</CardTitle>
                 <CardDescription>Project Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis eligendi corporis delectus eius pariatur consequatur accusantium facilis fugit saepe.</CardDescription>
             </CardHeader>
-            <CardContent>
-            </CardContent>
             <CardFooter className="flex justify-between">
-                <TooltipProvider>
-                    <Tooltip>
-                        <TooltipTrigger>
-                            <FaReact size={20} />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                            <p>React</p>
-                        </TooltipContent>
-                    </Tooltip>
-                </TooltipProvider>
+                <TooltipRE trigger={<FaReact size={20} />} tooltip='React' delay={400} />
             </CardFooter>
         </Card>
     )

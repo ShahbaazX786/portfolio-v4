@@ -1,3 +1,5 @@
+CL-4.2.1.3: Updated project card component.
+
 CL-4.2.1.2: Updated Contact page:
 - Added a new stylish button component.
 - Added a sheet flyover whenver say hello button is clicked.
