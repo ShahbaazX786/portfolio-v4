@@ -1,9 +1,6 @@
 'use client';
 
-import React from 'react'
-import { LuGithub, LuLinkedin, LuTwitter, LuInstagram, LuMail } from "react-icons/lu";
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 const RightSocialComponent = () => {
     return (
