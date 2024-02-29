@@ -3,6 +3,7 @@ import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
 
 import Header from '@/components/shared/header'
+import Footer from '@/components/shared/footer'
 import ActiveSectionContextProvider from '@/components/shared/activeSectionContextProvider'
 import BrandNameComponent from '@/components/shared/brandName'
 import { cn } from '@/lib/utils'
@@ -34,6 +35,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
         </ActiveSectionContextProvider>
       </body>
     </html>
