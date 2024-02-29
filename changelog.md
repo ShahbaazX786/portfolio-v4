@@ -1,3 +1,7 @@
+CL-4.2.1.2: Updated Contact page:
+- Added a new stylish button component.
+- Added a sheet flyover whenver say hello button is clicked.
+
 CL-4.2.1.1: Modified Heading component styles.
 
 CL-4.2.1: Added Footer Component:
