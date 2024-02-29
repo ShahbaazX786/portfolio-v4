@@ -1,12 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
 
 import Header from '@/components/shared/header'
 import ActiveSectionContextProvider from '@/components/shared/activeSectionContextProvider'
 import BrandNameComponent from '@/components/shared/brandName'
+import { cn } from '@/lib/utils'
 
-const inter = Inter({ subsets: ['latin'] });
+export const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: 'Shaik Shahbaaz Alam | Portfolio v4 | 2024',
@@ -20,7 +24,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={`${inter.className} bg-gray-50 text-gray-950 relative pt-24`}>
+      <body className={cn(
+        "bg-gray-50 text-gray-950 relative pt-24 font-sans", fontSans.variable)}>
         <span className="absolute top-4 left-5">
           <BrandNameComponent />
         </span>
