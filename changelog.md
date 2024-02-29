@@ -1,4 +1,6 @@
-CL-4.2.1: Added Footer Component
+CL-4.2.1.1: Modified Heading component styles.
+
+CL-4.2.1: Added Footer Component:
 - Created a reusable component with shadcn ui's tooltip component.
 - created types for footer props.
 
