@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { Button } from "@/components/ui/button"
 import {
     Dialog,
     DialogContent,
@@ -9,12 +9,13 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
+import { ToastAction } from "@/components/ui/toast"
+import { useToast } from "@/components/ui/use-toast"
+import { zodResolver } from '@hookform/resolvers/zod'
+import { ReactElement } from 'react'
 import { useForm } from 'react-hook-form'
+import * as z from 'zod'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
-import * as z from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { Textarea } from '../ui/textarea'
 
 export type DialogREProps = {
@@ -29,13 +30,35 @@ const formSchema = z.object({
 })
 
 const DialogRE = ({ trigger, content }: DialogREProps) => {
+    const { toast } = useToast()
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema)
     });
 
+    const sendCustomMessage = async (data: any) => {
+        const response = await fetch('/api/send', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+        if (response.status === 200) {
+            toast({
+                variant: 'default',
+                title: "Success!",
+                description: "Your Message Was Sent Sucessfully!.",
+                action: <ToastAction altText="Ok">Ok</ToastAction>,
+            })
+        }
+        else {
+            toast({
+                variant: 'destructive',
+                title: "Uh Oh!",
+                description: "There was a problem while sending Your Message!.",
+                action: <ToastAction altText="Close">Close</ToastAction>,
+            })
+        }
+    }
+
     const handleSubmit = (values: z.infer<typeof formSchema>) => {
-        console.log({values});
+        console.log({ values });
         localStorage.setItem('data', JSON.stringify(values));
+        sendCustomMessage(values);
     }
 
     return (

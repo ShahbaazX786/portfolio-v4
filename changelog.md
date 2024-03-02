@@ -1,3 +1,7 @@
+CL-4.2.4: Integrate Resend with custom Message Dialog.
+- Followed resend docs and integrated resend with portfolio.
+- Resend is just used to send a reply message / email to the user who sent us an email first.
+
 CL-4.2.3: Added a custom Message Dialog.
 - Installed zod for form validation.
 - utilized and created a reusable dialog component from shadcn ui component.
