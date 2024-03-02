@@ -1,3 +1,8 @@
+CL-4.2.2: Added Socials in contact page button.
+- Changed the shining color in stylish button.
+- Added contact card component.
+- Used contact card component to render socials in contact page button.
+
 CL-4.2.1.3: Updated project card component.
 
 CL-4.2.1.2: Updated Contact page:
