@@ -1,3 +1,8 @@
+CL-4.2.3: Added a custom Message Dialog.
+- Installed zod for form validation.
+- utilized and created a reusable dialog component from shadcn ui component.
+- Added and styled the custom message component.
+
 CL-4.2.2.5: Added a button in socials sheet.
 
 CL-4.2.2: Added Socials in contact page button.
