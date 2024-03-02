@@ -1,3 +1,5 @@
+CL-4.2.2.5: Added a button in socials sheet.
+
 CL-4.2.2: Added Socials in contact page button.
 - Changed the shining color in stylish button.
 - Added contact card component.
