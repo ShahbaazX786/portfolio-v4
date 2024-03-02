@@ -1,3 +1,5 @@
+CL-4.2.5: Refactoring code.
+
 CL-4.2.4: Integrate Resend with custom Message Dialog.
 - Followed resend docs and integrated resend with portfolio.
 - Resend is just used to send a reply message / email to the user who sent us an email first.

@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button"
+'use client';
+
+import { Button } from "@/components/ui/button";
 import {
     Dialog,
     DialogContent,
@@ -7,32 +9,23 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { ToastAction } from "@/components/ui/toast"
-import { useToast } from "@/components/ui/use-toast"
-import { zodResolver } from '@hookform/resolvers/zod'
-import { ReactElement } from 'react'
-import { useForm } from 'react-hook-form'
-import * as z from 'zod'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
-import { Textarea } from '../ui/textarea'
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
+import { customMessageSchema } from "@/lib/schemas";
+import { customMessageDialogProps } from "@/lib/types";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import * as z from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
+import { Textarea } from '../ui/textarea';
 
-export type DialogREProps = {
-    trigger: string | ReactElement,
-    content?: string | ReactElement;
-}
 
-const formSchema = z.object({
-    name: z.string().min(2).max(200),
-    email: z.string().email(),
-    message: z.string().min(5).max(200)
-})
-
-const DialogRE = ({ trigger, content }: DialogREProps) => {
+const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => {
     const { toast } = useToast()
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema)
+    const form = useForm<z.infer<typeof customMessageSchema>>({
+        resolver: zodResolver(customMessageSchema)
     });
 
     const sendCustomMessage = async (data: any) => {
@@ -55,7 +48,7 @@ const DialogRE = ({ trigger, content }: DialogREProps) => {
         }
     }
 
-    const handleSubmit = (values: z.infer<typeof formSchema>) => {
+    const handleSubmit = (values: z.infer<typeof customMessageSchema>) => {
         console.log({ values });
         localStorage.setItem('data', JSON.stringify(values));
         sendCustomMessage(values);
@@ -115,7 +108,6 @@ const DialogRE = ({ trigger, content }: DialogREProps) => {
                         <Button type="submit">Let&apos;s Go!</Button>
                     </form>
                 </Form>
-
                 <DialogFooter>
                 </DialogFooter>
             </DialogContent>
@@ -123,4 +115,4 @@ const DialogRE = ({ trigger, content }: DialogREProps) => {
     )
 }
 
-export default DialogRE;
+export default CustomMessageDialog;

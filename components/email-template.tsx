@@ -1,7 +1,4 @@
-
-interface EmailTemplateProps {
-    userName: string;
-}
+import { EmailTemplateProps } from "@/lib/types";
 
 export const EmailTemplate = ({ userName }: EmailTemplateProps) => (
     <div>

@@ -18,7 +18,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { RxGithubLogo } from "react-icons/rx";
 import { SiGmail } from "react-icons/si";
 import ContactCard from './shared/ContactCard';
-import DialogRE from './shadcn-simplified/reusable-dialog';
+import CustomMessageDialog from './shared/customMessageDialog';
 
 
 
@@ -74,7 +74,7 @@ const ContactComponent = () => {
                     </SheetHeader>
                     <div className="grid grid-cols-2 gap-4 py-4">
                         {socials.map((social, index) => (<ContactCard key={index} icon={social.icon} social={social.platform} tag={social.tagline} username={social.username} link={social.link} />))}
-                        <DialogRE trigger={<Button className='col-span-2 mt-4'>Wanna send a specialized Message?</Button>} />
+                        <CustomMessageDialog trigger={<Button className='col-span-2 mt-4'>Wanna send a specialized Message?</Button>} />
                     </div>
                 </SheetContent>
             </Sheet>

@@ -1,14 +1,6 @@
-import { ReactElement } from 'react'
+import { ContactCardProps } from '@/lib/types'
 import TooltipRE from '../shadcn-simplified/reusable-tooltip'
 import { Card, CardContent } from '../ui/card'
-
-export type ContactCardProps = {
-    icon: string | ReactElement,
-    tag: string,
-    social: string,
-    username: string,
-    link: string,
-}
 
 const ContactCard = ({ icon, tag, social, username, link }: ContactCardProps) => {
     return (

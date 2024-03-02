@@ -1,11 +1,6 @@
 import React, { ReactElement } from 'react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
-
-export type TooltipREProps = {
-    trigger: string | ReactElement;
-    tooltip: string;
-    delay : number
-};
+import { TooltipREProps } from '@/lib/types';
 
 const TooltipRE = ({ trigger, tooltip, delay }: TooltipREProps) => {
     return (
