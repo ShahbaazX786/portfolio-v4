@@ -28,7 +28,7 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
         resolver: zodResolver(customMessageSchema)
     });
 
-    const sendCustomMessage = async (data: any) => {
+    const sendCustomMessageReply = async (data: any) => {
         const response = await fetch('/api/send', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
         if (response.status === 200) {
             toast({
@@ -48,10 +48,25 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
         }
     }
 
-    const handleSubmit = (values: z.infer<typeof customMessageSchema>) => {
+    const sendCustomMessage = async(data:any) => {
+        const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        console.log('ok');
+        console.log(response);
+        if(response?.status === 200){
+             toast({
+                variant: 'default',
+                title: "Success!",
+                description: "Your Message Was Sent Sucessfully!.",
+                action: <ToastAction altText="Ok">Ok</ToastAction>,
+            })
+        }
+    }
+
+    const handleSubmit = async (values: z.infer<typeof customMessageSchema>) => {
         console.log({ values });
         localStorage.setItem('data', JSON.stringify(values));
-        sendCustomMessage(values);
+        await sendCustomMessage(values);
+        await sendCustomMessageReply(values);
     }
 
     return (

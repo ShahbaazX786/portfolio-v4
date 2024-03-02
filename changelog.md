@@ -1,3 +1,12 @@
+CL-4.2.6: Integrated Mongo DB atlas with portfolio
+- Created a new MongoDB atlas account with shal78.
+- copied the password along with uri in a safe virtual place.
+- installed mongoose lib.
+- created a new mongo model for customMessage.
+- created a new mongo schema for customMessage.
+- Added a new API route for storing the message in mongo db using api/contact post API.
+- created a mongo connection function in lib.
+
 CL-4.2.5: Refactoring code.
 
 CL-4.2.4: Integrate Resend with custom Message Dialog.
