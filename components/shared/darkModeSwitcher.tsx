@@ -11,10 +11,15 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import useExistingTheme from "@/hooks/useDarkMode"
 
 export function ModeToggle() {
-    const { setTheme } = useTheme()
-
+    const { setTheme } = useTheme();
+    const ExistingTheme =  useExistingTheme();
+    if(ExistingTheme){
+        setTheme(ExistingTheme);
+    }
+    
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>

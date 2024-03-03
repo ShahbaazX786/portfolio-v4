@@ -1,3 +1,5 @@
+CL-4.2.9: Added Existing Dark Mode checking and applying it to theme switcher.
+
 CL-4.2.8: Added Dark Mode theme switcher.
 
 CL-4.2.7.2: Added .env file to gitignore list.
