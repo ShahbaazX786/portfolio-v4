@@ -38,6 +38,7 @@ export type ContactCardProps = {
   link: string;
 };
 
+export type ThemeType = "light" | "dark";
 
 export interface ActiveSectionContextProviderProps {
   children: React.ReactNode;

@@ -1,3 +1,5 @@
+CL-4.2.9.1: Missed types in previous commit. 
+
 CL-4.2.9: Added Existing Dark Mode checking and applying it to theme switcher.
 
 CL-4.2.8: Added Dark Mode theme switcher.
