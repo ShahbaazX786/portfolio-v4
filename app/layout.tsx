@@ -8,6 +8,7 @@ import ActiveSectionContextProvider from '@/components/shared/activeSectionConte
 import BrandNameComponent from '@/components/shared/brandName'
 import { cn } from '@/lib/utils'
 import { Toaster } from '@/components/ui/sonner'
+import { ThemeProvider } from '@/components/shared/theme-provider'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -33,12 +34,14 @@ export default function RootLayout({
         </span>
         <div className='bg-[#dbd7fb] absolute top-[-6rem] right-[11rem] h-[31.23rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem] -z-10'></div>
         <div className='bg-[#fbe2e3] absolute top-[-1rem] left-[-35rem] h-[31.23rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] -z-10'></div>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster />
-        </ActiveSectionContextProvider>
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster />
+          </ActiveSectionContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
