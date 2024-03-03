@@ -1,3 +1,5 @@
+CL-4.2.7.2: Added .env file to gitignore list.
+
 CL-4.2.7.1: Added .env file structure.
 
 CL-4.2.7: Added toast messages.
