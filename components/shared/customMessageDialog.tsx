@@ -5,72 +5,90 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
+    DialogTrigger
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { ToastAction } from "@/components/ui/toast";
-import { useToast } from "@/components/ui/use-toast";
 import { customMessageSchema } from "@/lib/schemas";
 import { customMessageDialogProps } from "@/lib/types";
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from "react";
 import { useForm } from 'react-hook-form';
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { toast } from "sonner";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
 import { Textarea } from '../ui/textarea';
 
 
+
 const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => {
-    const { toast } = useToast()
     const form = useForm<z.infer<typeof customMessageSchema>>({
         resolver: zodResolver(customMessageSchema)
     });
 
+    const [dialogopen, setDialogOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+
     const sendCustomMessageReply = async (data: any) => {
         const response = await fetch('/api/send', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
         if (response.status === 200) {
-            toast({
-                variant: 'default',
-                title: "Success!",
-                description: "Your Message Was Sent Sucessfully!.",
-                action: <ToastAction altText="Ok">Ok</ToastAction>,
-            })
+            toast.success("Success!", {
+                duration:10000,
+                description: "Check your email inbox for a special message 😉!.",
+                action: {
+                    label: 'Cool',
+                    onClick: () => toast.dismiss()
+                },
+            });
         }
         else {
-            toast({
-                variant: 'destructive',
-                title: "Uh Oh!",
-                description: "There was a problem while sending Your Message!.",
-                action: <ToastAction altText="Close">Close</ToastAction>,
-            })
+            toast.error("Uh Oh 😶!", {
+                duration: 10000,
+                description: "Seems like there was a problem while sending a special reply to your inbox!.",
+                action: {
+                    label: 'Okay',
+                    onClick: () => toast.dismiss()
+                },
+            });
         }
     }
 
-    const sendCustomMessage = async(data:any) => {
-        const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-        console.log('ok');
-        console.log(response);
-        if(response?.status === 200){
-             toast({
-                variant: 'default',
-                title: "Success!",
+    const sendCustomMessage = async (formData: any) => {
+        setLoading(true);
+        const data = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
+        if (data?.status == 200) {
+            toast.success("Success!", {
+                duration: 10000,
                 description: "Your Message Was Sent Sucessfully!.",
-                action: <ToastAction altText="Ok">Ok</ToastAction>,
-            })
+                action: {
+                    label: 'Ok',
+                    onClick: () => toast.dismiss()
+                },
+            });
+            await sendCustomMessageReply(formData);
+        } else {
+            toast.error("Oops 😶!", {
+                duration: 10000,
+                description: "It seems like your message was not sent succesfully!",
+                action: {
+                    label: 'Close',
+                    onClick: () => toast.dismiss()
+                },
+            });
         }
+        setLoading(false);
+        setDialogOpen(false);
     }
 
     const handleSubmit = async (values: z.infer<typeof customMessageSchema>) => {
-        console.log({ values });
-        localStorage.setItem('data', JSON.stringify(values));
         await sendCustomMessage(values);
-        await sendCustomMessageReply(values);
+        form.reset();
     }
 
     return (
-        <Dialog>
+        <Dialog open={dialogopen} onOpenChange={setDialogOpen}>
             <DialogTrigger asChild>
                 {trigger}
             </DialogTrigger>
@@ -120,11 +138,12 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
                                 </div>
                             </FormItem>
                         }} />
-                        <Button type="submit">Let&apos;s Go!</Button>
+                        <Button type="submit" disabled={loading}>
+                            {loading && <AiOutlineLoading3Quarters className="mr-2 h-4 w-4 animate-spin" />}
+                            Let&apos;s Go!
+                        </Button>
                     </form>
                 </Form>
-                <DialogFooter>
-                </DialogFooter>
             </DialogContent>
         </Dialog>
     )
