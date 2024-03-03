@@ -1,3 +1,5 @@
+CL-4.2.6.6: Replaced normal toasts with sonner toasts.
+
 CL-4.2.6.5: Added toaster context in root layout of the project to display toasts.
 
 CL-4.2.6: Integrated Mongo DB atlas with portfolio
