@@ -7,6 +7,7 @@ import Footer from '@/components/shared/footer'
 import ActiveSectionContextProvider from '@/components/shared/activeSectionContextProvider'
 import BrandNameComponent from '@/components/shared/brandName'
 import { cn } from '@/lib/utils'
+import { Toaster } from '@/components/ui/sonner'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Toaster />
         </ActiveSectionContextProvider>
       </body>
     </html>

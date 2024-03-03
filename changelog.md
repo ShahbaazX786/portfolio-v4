@@ -1,3 +1,5 @@
+CL-4.2.6.5: Added toaster context in root layout of the project to display toasts.
+
 CL-4.2.6: Integrated Mongo DB atlas with portfolio
 - Created a new MongoDB atlas account with shal78.
 - copied the password along with uri in a safe virtual place.
