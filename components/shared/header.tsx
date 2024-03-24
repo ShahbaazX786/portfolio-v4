@@ -9,12 +9,13 @@ import Link from 'next/link';
 import BrandNameComponent from './brandName';
 import { ModeToggle } from './darkModeSwitcher';
 import HeaderAnime from './header-anim';
+import useScrollDirection from '@/hooks/useScrollDirection';
 
 const Header = () => {
     const { activeLink, setActiveLink, setTimeOfLastClick } = useActiveSectionContext();
-
+    const scrollDirection = useScrollDirection();
     return (
-        <header className='sticky top-0 z-10 h-20 w-full bg-gray-0 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-0'>
+        <header className={clsx('sticky', 'z-10', 'h-20', 'w-full', 'bg-gray-0', 'rounded-md', 'bg-clip-padding', 'backdrop-filter', 'backdrop-blur-xl', 'bg-opacity-0', 'transition-all', 'ease-linear', { 'top-0': scrollDirection === 'top' }, { '-top-24': scrollDirection === 'down' })}>
             <motion.div initial={{ y: -100, x: 0, opacity: 0 }} animate={{ y: 0, x: 0, opacity: 1 }} transition={{ delay: 0.2 }} className='flex flex-row justify-between items-center bg-transparent mx-10 ease-linear'>
                 <BrandNameComponent />
                 <div>

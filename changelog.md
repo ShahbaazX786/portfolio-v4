@@ -1,3 +1,8 @@
+CL-4.2.9.5: Refactored Header component.
+- Added hide on scroll animation.
+- Added a scroll direction hook.
+- Changed button variant in darkmodeswitcher.
+
 CL-4.2.9.4: Refactored BrandName component.
 - Old file deletion and new file updation.
 - Imports organized.
