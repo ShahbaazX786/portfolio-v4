@@ -1,3 +1,6 @@
+CL-4.2.9.2: Refactored BrandName component.
+- 
+
 CL-4.2.9.1: Missed types in previous commit. 
 
 CL-4.2.9: Added Existing Dark Mode checking and applying it to theme switcher.
