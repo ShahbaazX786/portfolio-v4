@@ -1,13 +1,11 @@
 import AboutComponent from "@/components/about";
+import ContactComponent from "@/components/contact";
+import ExperienceComponent from "@/components/experience";
 import HeroComponent from "@/components/hero";
 import ProjectsComponent from "@/components/projects";
-import SectionDividerComponent from "@/components/shared/sectionDivider";
 import LeftSocialComponent from "@/components/shared/leftSocial";
-import RightSocialComponent from "@/components/shared/rightSocial";
+import SectionDividerComponent from "@/components/shared/sectionDivider";
 import SkillsComponent from "@/components/skills";
-import ExperienceComponent from "@/components/experience";
-import ContactComponent from "@/components/contact";
-import ProjectCard from "@/components/shared/ProjectCard";
 
 export default function Home() {
   return (
@@ -20,6 +18,7 @@ export default function Home() {
       </div>
       {/* <ProjectCard /> */}
       {/* <h1 className="text-5xl font-bold transition-all ease-linear hover:scale-110 text-center mx-auto my-auto pt-12">Bismillah</h1> */}
+      {/* <Experience2 /> */}
       <HeroComponent />
       <SectionDividerComponent />
       <AboutComponent />

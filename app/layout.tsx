@@ -2,13 +2,12 @@ import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
 
-import Header from '@/components/shared/header'
-import Footer from '@/components/shared/footer'
 import ActiveSectionContextProvider from '@/components/shared/activeSectionContextProvider'
-import BrandNameComponent from '@/components/shared/brandName'
-import { cn } from '@/lib/utils'
-import { Toaster } from '@/components/ui/sonner'
+import Footer from '@/components/shared/footer'
+import HeaderComponent from '@/components/shared/HeaderComponent'
 import { ThemeProvider } from '@/components/shared/theme-provider'
+import { Toaster } from '@/components/ui/sonner'
+import { cn } from '@/lib/utils'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -28,15 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en" className='scroll-smooth'>
       <body className={cn(
-        "bg-gray-50 text-gray-950 relative pt-24 font-sans", fontSans.variable)}>
-        <span className="absolute top-4 left-5">
-          <BrandNameComponent />
-        </span>
+        "bg-gray-50 text-gray-950 relative font-sans", fontSans.variable)}>
         <div className='bg-[#dbd7fb] absolute top-[-6rem] right-[11rem] h-[31.23rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem] -z-10'></div>
         <div className='bg-[#fbe2e3] absolute top-[-1rem] left-[-35rem] h-[31.23rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] -z-10'></div>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <ActiveSectionContextProvider>
-            <Header />
+            {/* <Header /> */}
+            <HeaderComponent />
             {children}
             <Footer />
             <Toaster />

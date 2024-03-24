@@ -1,5 +1,9 @@
+CL-4.2.9.3: Refactored BrandName component.
+- Added brand name + logo.
+- Added theme switcher.
+- Added framer-motion animations.
+
 CL-4.2.9.2: Refactored BrandName component.
-- 
 
 CL-4.2.9.1: Missed types in previous commit. 
 
