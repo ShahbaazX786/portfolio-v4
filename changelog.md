@@ -1,3 +1,7 @@
+CL-4.2.9.4: Refactored BrandName component.
+- Old file deletion and new file updation.
+- Imports organized.
+
 CL-4.2.9.3: Refactored BrandName component.
 - Added brand name + logo.
 - Added theme switcher.

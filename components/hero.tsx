@@ -1,12 +1,10 @@
 "use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { BsFillArrowRightCircleFill, BsDownload } from "react-icons/bs";
 import { useSectionInView } from '@/hooks/useSectionInView';
-
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsDownload, BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const HeroComponent = () => {
     const { ref } = useSectionInView("Home", 0.1);

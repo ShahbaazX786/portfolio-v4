@@ -3,8 +3,8 @@ import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
 
 import ActiveSectionContextProvider from '@/components/shared/activeSectionContextProvider'
-import Footer from '@/components/shared/footer'
-import HeaderComponent from '@/components/shared/HeaderComponent'
+import Footer from '@/components/shared/footer';
+import Header from '@/components/shared/Header';
 import { ThemeProvider } from '@/components/shared/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
@@ -32,8 +32,7 @@ export default function RootLayout({
         <div className='bg-[#fbe2e3] absolute top-[-1rem] left-[-35rem] h-[31.23rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] -z-10'></div>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <ActiveSectionContextProvider>
-            {/* <Header /> */}
-            <HeaderComponent />
+            <Header />
             {children}
             <Footer />
             <Toaster />

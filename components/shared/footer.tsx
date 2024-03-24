@@ -1,11 +1,8 @@
-import React from 'react'
 import TooltipRE from '../shadcn-simplified/reusable-tooltip';
 
-import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { SiRadixui } from "react-icons/si";
+import { SiRadixui, SiTailwindcss } from "react-icons/si";
+import { TbBrandFramerMotion, TbBrandNextjs } from "react-icons/tb";
 
 
 const TechStack = [
