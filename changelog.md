@@ -1,3 +1,5 @@
+CL-4.2.9.6.3: Added New Resume.
+
 CL-4.2.9.6.2: Minor bug fixes and Deleted Resume.
 
 CL-4.2.9.6.1: Minor Spacing bug fix in contact section.
