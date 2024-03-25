@@ -15,7 +15,7 @@ const BrandNameComponent = () => {
 
 export const animateName = (name: string) => (
   Array.from(name).map((letter, index) => (
-    <span key={index} className='drop-shadow-lg text-black font-bold text-2xl hover:-translate-y-2 hover:scale-110 transition-all ease-out cursor-pointer'>
+    <span key={index} className='drop-shadow-lg text-black font-bold text-2xl hover:text-sky-400 hover:animate-bounce cursor-pointer'>
       {letter}
     </span>
   ))

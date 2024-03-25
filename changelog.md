@@ -1,3 +1,5 @@
+CL-4.2.9.5.1: Minor animation optimization.
+
 CL-4.2.9.5: Refactored Header component.
 - Added hide on scroll animation.
 - Added a scroll direction hook.
