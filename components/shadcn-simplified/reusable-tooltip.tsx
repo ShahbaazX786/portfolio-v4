@@ -1,6 +1,5 @@
-import React, { ReactElement } from 'react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 import { TooltipREProps } from '@/lib/types';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
 const TooltipRE = ({ trigger, tooltip, delay }: TooltipREProps) => {
     return (

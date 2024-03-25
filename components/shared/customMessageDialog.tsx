@@ -94,7 +94,7 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                    <DialogTitle>Custom Message</DialogTitle>
+                    <DialogTitle className="mb-2">Custom Message</DialogTitle>
                     <DialogDescription>
                         I check Custom Messages less often, but I will try to respond back if it is a good message.
                     </DialogDescription>
@@ -107,7 +107,7 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
                                     <FormLabel>Name</FormLabel>
                                     <span className='flex flex-col justify-start gap-1'>
                                         <FormControl>
-                                            <Input {...field} type='text' placeholder='Your Name' />
+                                            <Input {...field} type='text' placeholder='Charles Xavier II' />
                                         </FormControl>
                                         <FormMessage></FormMessage>
                                     </span>
@@ -120,7 +120,7 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
                                     <FormLabel>Email</FormLabel>
                                     <span className='flex flex-col justify-start'>
                                         <FormControl>
-                                            <Input {...field} type='email' placeholder='yourEmail@email.com' />
+                                            <Input {...field} type='email' placeholder='example@email.com' />
                                         </FormControl>
                                         <FormMessage></FormMessage>
                                     </span>
@@ -138,7 +138,7 @@ const CustomMessageDialog = ({ trigger, content }: customMessageDialogProps) => 
                                 </div>
                             </FormItem>
                         }} />
-                        <Button type="submit" disabled={loading}>
+                        <Button type="submit" disabled={loading} className="mt-2">
                             {loading && <AiOutlineLoading3Quarters className="mr-2 h-4 w-4 animate-spin" />}
                             Let&apos;s Go!
                         </Button>

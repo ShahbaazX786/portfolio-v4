@@ -1,3 +1,7 @@
+CL-4.2.9.6: Dark Mode optimizations.
+- Layout, Header, Footer, Contact, custom Message, social sheet.
+- Added 2 new icons in footer.
+
 CL-4.2.9.5.1: Minor animation optimization.
 
 CL-4.2.9.5: Refactored Header component.

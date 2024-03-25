@@ -19,7 +19,7 @@ const Header = () => {
             <motion.div initial={{ y: -100, x: 0, opacity: 0 }} animate={{ y: 0, x: 0, opacity: 1 }} transition={{ delay: 0.2 }} className='flex flex-row justify-between items-center bg-transparent mx-10 ease-linear'>
                 <BrandNameComponent />
                 <div>
-                    <ul className='flex flex-row justify-center items-center text-sm font-medium text-gray-500 gap-5 xxs:gap-3 sm:gap-6'>
+                    <ul className='flex flex-row justify-center items-center text-sm font-medium text-gray-500 dark:text-gray-200 gap-5 xxs:gap-3 sm:gap-6'>
                         {
                             HeaderLinks.map(link => (
                                 <li className='h-3/4 flex items-center justify-center relative' key={link.hash}
@@ -27,7 +27,7 @@ const Header = () => {
                                         setActiveLink(link.name)
                                         setTimeOfLastClick(Date.now())
                                     }}>
-                                    <Link className={clsx('flex w-full items-center justify-center p-3 hover:text-gray-950 transition xxs:py-3 xxs:px-0', { 'text-gray-950': activeLink === link.name })} href={link.hash}>
+                                    <Link className={clsx('flex w-full items-center justify-center p-3 hover:text-gray-950 hover:dark:text-gray-400 transition xxs:py-3 xxs:px-0', { 'text-gray-950': activeLink === link.name })} href={link.hash}>
                                         <div className='flex flex-row items-center justify-center xxs:w-10'>
                                             <Image src={link.path} alt={link.name} width={100} height={100} priority className='xxs:visible xs:visible sm:hidden xxs:mx-0 xxs:px-3 xs:mx-2 xs:px-2 xs:my-auto scale-150' />
                                             <span className='xxs:hidden xs:hidden sm:visible text-sm font-medium'>{link.name}</span>
