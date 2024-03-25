@@ -1,3 +1,5 @@
+CL-4.2.9.6.1: Minor Spacing bug fix in contact section.
+
 CL-4.2.9.6: Dark Mode optimizations.
 - Layout, Header, Footer, Contact, custom Message, social sheet.
 - Added 2 new icons in footer.

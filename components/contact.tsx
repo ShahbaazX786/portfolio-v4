@@ -56,12 +56,12 @@ const ContactComponent = () => {
     ]
 
     return (
-        <section ref={ref} id='contact' className='lg:max-w-[50rem] xxs:w-64 xs:max-w-sm sm:max-w-sm sm:mb-0 md:mb-28 scroll-mt-28 mt-4 xxs:mt-10'>
+        <section ref={ref} id='contact' className='container lg:max-w-[45rem] xxs:w-64 xs:max-w-sm sm:max-w-sm sm:mb-0 md:mb-28 scroll-mt-28 mt-4 xxs:mt-10 min-h-[52vh]'>
             <SectionHeading heading={'Contact Me'} />
-            <p className='text-gray-800 dark:text-gray-400 text-lg'>Currently I&apos;m actively looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
+            <p className='text-gray-800 dark:text-gray-400 text-lg text-center'>Currently I&apos;m actively looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
             <Sheet>
                 <SheetTrigger asChild>
-                    <span className='mt-10 flex flex-row justify-center items-center'>
+                    <span className='mt-12 flex flex-row justify-center items-center'>
                         <StylishButton />
                     </span>
                 </SheetTrigger>
