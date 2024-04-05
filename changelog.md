@@ -1,3 +1,5 @@
+CL-4.2.10: Finalized Hero Section.
+
 CL-4.2.9.6.3: Added New Resume.
 
 CL-4.2.9.6.2: Minor bug fixes and Deleted Resume.

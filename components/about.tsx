@@ -14,7 +14,7 @@ const AboutComponent = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className='px-2 flex flex-col gap-4'
+                className='px-2 flex flex-col gap-4 mt-24'
             >
                 <SectionHeading heading={'About me'} />
                 <p className='text-center text-lg xxs:text-base sm:text-lg md:text-xl lg:text-2xl px-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iste ullam amet, ut est corrupti a velit dolor nobis repudiandae nemo blanditiis tempora optio laboriosam libero perspiciatis quidem! Eaque, laborum.</p>

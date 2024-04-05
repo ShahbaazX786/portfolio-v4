@@ -13,14 +13,9 @@ export default function Home() {
       <div className="fixed bottom-0 left-5">
         <LeftSocialComponent />
       </div>
-      <div className="fixed bottom-0 right-5">
-        {/* <RightSocialComponent /> */}
-      </div>
-      {/* <ProjectCard /> */}
       {/* <h1 className="text-5xl font-bold transition-all ease-linear hover:scale-110 text-center mx-auto my-auto pt-12">Bismillah</h1> */}
-      {/* <Experience2 /> */}
+      {/* <ProjectCard /> */}
       <HeroComponent />
-      <SectionDividerComponent />
       <AboutComponent />
       <SectionDividerComponent />
       <SkillsComponent />
