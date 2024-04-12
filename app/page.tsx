@@ -17,7 +17,6 @@ export default function Home() {
       {/* <ProjectCard /> */}
       <HeroComponent />
       <AboutComponent />
-      <SectionDividerComponent />
       <SkillsComponent />
       <SectionDividerComponent />
       <ProjectsComponent />

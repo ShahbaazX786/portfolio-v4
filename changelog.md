@@ -1,3 +1,7 @@
+CL-4.3.0: Finalized About Section.
+- Added a new asset.
+- Fine tuned few things in hero section.
+
 CL-4.2.10: Finalized Hero Section.
 
 CL-4.2.9.6.3: Added New Resume.

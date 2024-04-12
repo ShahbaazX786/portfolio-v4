@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { BsDownload, BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const HeroComponent = () => {
-    const { ref } = useSectionInView("Home", 0.1);
+    const { ref } = useSectionInView("Home", 0.5);
 
     return (
         <section ref={ref} className='md:max-w-[40rem] lg:max-w-[60rem] max-w-[60rem] text-center sm:mb-0 scroll-mt-[80rem] mt-10' id='home'>
@@ -25,7 +25,7 @@ const HeroComponent = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className='flex flex-row xxs:flex-col justify-start items-start gap-5 my-10'>
+                className='flex flex-row xxs:flex-col justify-start items-start gap-5 mb-32'>
                 <Link href="#contact" className="flex flex-row gap-2 items-center justify-center bg-black text-white border font-normal overflow-hidden relative px-8 py-4 xxs:py-2 rounded-full hover:brightness-150 hover:scale-105 duration-300 group shadow-lg active:scale-95">
                     <span className="bg-gray-400 shadow-gray-400 absolute top-0 left-[-150%] inline-flex w-5 h-10 rounded-md opacity-50 group-hover:left-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
                     Get in touch with me <BsFillArrowRightCircleFill />
@@ -36,7 +36,7 @@ const HeroComponent = () => {
                 </a>
             </motion.div>
         </section>
-    )       
+    )
 }
 
 export default HeroComponent;
